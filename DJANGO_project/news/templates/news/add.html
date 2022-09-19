@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  {% include 'inc/_navbar.html' %}
+{% endblock %}
+
+{% block full_container %}
+  <div class="container">
+    <br>
+    <h1>Форма по добавлению новости</h1>
+    <form method="post">
+      {% csrf_token %}
+      {{ form.title }}<br>
+      {{ form.content }}<br>
+      {{ form.category }}<br>
+
+      <button class="btn btn-success" type="submit">Подтвердить добавление новости</button>
+      <span>{{ error }}</span>
+    </form>
+  </div>
+{% endblock %}

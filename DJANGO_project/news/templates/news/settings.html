@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  {% include 'inc/_navbar.html' %}
+{% endblock %}
+
+{% block full_container %}
+  <div class="container">
+    <br>
+    <p style="font-size:22px;" align="center"><a href="{% url 'delete_news_name' %}">DELETE THE NEWS</a> <- If you want to delete some news press this button</p><br>
+    <p style="font-size:22px;" align="center"><a href="{% url 'delete_category_name' %}">DELETE THE CATEGORY</a> <- If you want to delete some category press this button</p><br>
+    <p style="font-size:22px;" align="center"><a href="{% url 'add_category_name' %}">ADD THE CATEGORY</a> <- If you want to add some category press this button</p><br>
+  </div>
+{% endblock %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block nav %}
+  {% include 'inc/_navbar.html' %}
+{% endblock %}
+
+{% block full_container %}
+  <div class="container">
+    <br>
+    {% for i in categories %}
+      <h5 class="card-title"><a href="#" class="btn btn-danger btn-sm">DELETE</a> {{ i.title }} <span style="color:#b3b3b3;"><- Чтобы удалить эту категорию, нажмите на кнопку слева</span></h5><br>
+    {% endfor %}
+  </div>
+{% endblock %}

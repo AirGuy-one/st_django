@@ -1,0 +1,14 @@
+{% extends "housesApp/base.html" %}
+
+{% block tasks %}
+    <div class="container">
+        <h1>Create your task</h1>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form.title }}<br>
+            {{ form.task }}<br>
+            <button type="submit" class="btn btn-success">add</button>
+            <span>{{ error }}</span>
+        </form>
+    </div>
+{% endblock %}
